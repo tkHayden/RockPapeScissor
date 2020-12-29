@@ -104,12 +104,10 @@ function gameFinish(user, computer) {
     document.getElementById("gameOver").style.display = "inline";
     if (user > computer) {
         document.getElementById('gameResult').innerHTML = "Congtats! You have beat the Computer by a score of " + user + " to " + computer;
-    } else if (computer > user ){
+    } else {
         document.getElementById('gameResult').innerHTML = "Sorry! You have lost to the Computer by a score of " + user + " to " + computer;
     }
-    else{
-        document.getElementById('gameResult').innerHTML = "You and the computer tied with a score of " + user + " to " + computer;
-    }
+    
     
 
 }
@@ -143,7 +141,7 @@ function playRound(user,) {
     }
 
     //game has ended. Display results
-    if (round == 7) {
+    if (userScore == 7 || computerScore == 7) {
         gameFinish(userScore, computerScore);
     }
     let computer = computerPlay();
