@@ -140,10 +140,7 @@ function playRound(user,) {
         document.querySelector(".display").style.display = 'flex';
     }
 
-    //game has ended. Display results
-    if (userScore == 7 || computerScore == 7) {
-        gameFinish(userScore, computerScore);
-    }
+    
     let computer = computerPlay();
     let result = "You picked an invalid choice";
     if (user.localeCompare(choice[0]) == 0) {        // user chose rock
@@ -198,6 +195,10 @@ function playRound(user,) {
         }
     }
     round++;
+    //game has ended. Display results
+    if (userScore == 7 || computerScore == 7) {
+        gameFinish(userScore, computerScore);
+    }
 }
 
 
